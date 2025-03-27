@@ -1,0 +1,325 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+
+  link[rel="icon"] {
+    border-radius: 50%;
+  }
+
+  /* .nav-link {
+    border-bottom-color:transparent;
+  }
+  #home_line {
+    border-bottom-color:transparent !important;
+  }
+  #market_line:active{
+    border-bottom-color:#0056b3 !important;
+  } */
+
+  /* Market Display */
+  #market {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .coin-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    width: 1000px;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  .coin-card:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+  }
+  .coin-card h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .coin-card p {
+    font-size: 14px;
+    color: #333;
+  }
+  .toggle-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  .chart-container {
+    margin-top: 10px;
+  }
+
+#market_h1{
+    display: flex;
+    justify-content: center;
+    color: #0056b3;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+  float: right;
+  margin-top: -25px;
+}
+
+.favorite-btn:hover {
+  color: gold;
+}
+
+
+
+
+
+.nav-underline{
+    margin-left: 20px !important;
+    
+    
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: #0056b3;
+}
+
+#preloader {
+    /* background: url(preloader.gif); */
+    background-size: 100%;
+    height: 500px;
+    position: static;
+    z-index: 100;
+}
+
+.d-flex{
+    margin: 12px; 
+    width: 1000px; 
+    justify-content: center; 
+    display: block;
+    margin-left: 131px;
+    color: #0056b3 !important;
+    border-color: #0056b3 !important;
+}
+
+.btn-outline-success{
+    color: #0056b3 !important;
+    border-color: #0056b3 !important;
+}
+.btn-outline-success:active{
+    background-color: #0056b3 !important;
+    color: white !important;
+}
+.btn-outline-success:hover{
+    background-color: #0056b3 !important;
+    color: white !important;
+}
+
+
+/* login form */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  border-radius: 15px;
+}
+.form {
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  background: radial-gradient(circle at center, #0d1b2a, #1b263b, #000000);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: radial-gradient(circle at center, #1e3558, #2a4365, #3b536b);
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  
+}
+.form button {
+
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border-radius: 25px;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+
+
+
+#parag1 p{
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.button_class{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.button_class button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border-radius: 25px;
+  width: 10%;
+  border: 0;
+  padding: 15px;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15;
+}
+.button_class button:hover,.button_class button:active,.button_class button:focus {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+}
+
+
+/* finnnhub news  */
+#crypto-news {
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.news-article h3 {
+  color: #007bff;
+}
+
+.news-article p {
+  font-size: 14px;
+}
+
+.news-article a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+}
+
+#crypto-news {
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.news-article h3 {
+  color: #007bff;
+}
+
+.news-article p {
+  font-size: 14px;
+}
+
+.news-article a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+}
