@@ -76,112 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// //login form
-// document.addEventListener("DOMContentLoaded", function () {
-//   const loginForm = document.querySelector(".login-form");
-//   const registerForm = document.querySelector(".register-form");
-//   const toggleLinks = document.querySelectorAll(".message a");
-//   // Hide register form initially
-//   registerForm.style.display = "none";
-//   toggleLinks.forEach(link => {
-//       link.addEventListener("click", function (event) {
-//           event.preventDefault();
-//           if (loginForm.style.display === "none") {
-//               loginForm.style.display = "block";
-//               registerForm.style.display = "none";
-//           } else {
-//               loginForm.style.display = "none";
-//               registerForm.style.display = "block";
-//           }
-//       });
-//   });
-//   // Register button functionality
-//   document.querySelector(".register-form button").addEventListener("click", function (event) {
-//       event.preventDefault();
-      
-//       const username = document.querySelector(".register-form input[placeholder='Username']").value;
-//       const email = document.querySelector(".register-form input[placeholder='Email Address']").value;
-//       const password = document.querySelector(".register-form input[placeholder='Password']").value;
-//       if (username && email && password) {
-//           // Store user credentials in local storage
-//           localStorage.setItem("user", JSON.stringify({ username, email, password }));
-//           alert("Account created successfully!");
-//           // Switch to login form after registration
-//           loginForm.style.display = "block";
-//           registerForm.style.display = "none";
-//       } else {
-//           alert("Please fill in all fields.");
-//       }
-//   });
-//   // Login button functionality
-//   document.querySelector(".login-form button").addEventListener("click", function (event) {
-//       event.preventDefault();
-      
-//       const loginUsername = document.querySelector(".login-form input[placeholder='Username']").value;
-//       const loginPassword = document.querySelector(".login-form input[placeholder='Password']").value;
-//       const storedUser = JSON.parse(localStorage.getItem("user"));
-//       if (storedUser && storedUser.username === loginUsername && storedUser.password === loginPassword) {
-//           alert("Login successful!");
-//           // Redirect or perform any action after successful login
-//       } else {
-//           alert("Invalid username or password.");
-//       }
-//   });
-// });
-// const marketDiv = document.getElementById("market");
-//     const COINGECKO_API = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
-//     // Fetch and display crypto market
-//     fetch(COINGECKO_API)
-//       .then(response => response.json())
-//       .then(data => displayCoins(data))
-//       .catch(error => console.error('Error fetching data:', error));
-//     function displayCoins(coins) {
-//       marketDiv.innerHTML = ''; // Clear previous results
-//       coins.forEach(coin => {
-//         const coinCard = document.createElement("div");
-//         coinCard.className = "coin-card";
-//         coinCard.innerHTML = `
-//           <h3>${coin.name}</h3>
-//           <p>Price: $${coin.current_price.toLocaleString()}</p>
-//           <button class="toggle-btn">\u25BC Show Graph</button>
-//           <div class="chart-container" style="display: none;">
-//             <canvas id="${coin.id}-chart" width="400" height="200"></canvas>
-//           </div>
-//         `;
-//         // Append coin card to the market div
-//         marketDiv.appendChild(coinCard);
-//         // Button to toggle the graph
-//         const toggleButton = coinCard.querySelector(".toggle-btn");
-//         const chartContainer = coinCard.querySelector(".chart-container");
-//         toggleButton.addEventListener("click", () => {
-//           chartContainer.style.display = chartContainer.style.display === "none" ? "block" : "none";
-//           if (chartContainer.style.display === "block") {
-//             showCoinGraph(coin.id, `${coin.id}-chart`);
-//           }
-//         });
-//       });
-//     }
-//     function showCoinGraph(coinId, chartId) {
-//       fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=7`)
-//         .then(response => response.json())
-//         .then(data => {
-//           const prices = data.prices.map(point => point[1]);
-//           const labels = data.prices.map(point => new Date(point[0]).toLocaleDateString());
-//           const ctx = document.getElementById(chartId).getContext("2d");
-//           new Chart(ctx, {
-//             type: 'line',
-//             data: {
-//               labels: labels,
-//               datasets: [{
-//                 label: 'Price (USD)',
-//                 data: prices,
-//                 borderColor: '#007bff',
-//                 fill: false
-//               }]
-//             }
-//           });
-//         });
-//     }
+
 //search form
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".form-control");
@@ -239,15 +134,7 @@ function displayCoins(coins) {
         showCoinGraph(coin.id, `${coin.id}-chart`);
       }
     });
-//     // Handle favorite button click
-//     const favoriteBtn = coinCard.querySelector(".favorite-btn");
-//     updateFavoriteButton(favoriteBtn, coin.id);
-//     favoriteBtn.addEventListener("click", () => {
-//       toggleFavorite(coin.id, coin.name);
-//       updateFavoriteButton(favoriteBtn, coin.id);
-//     });
-//   });
-// }
+
   function showCoinGraph(coinId, chartId) {
   fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=7`)
     .then((response) => response.json())
@@ -272,36 +159,7 @@ function displayCoins(coins) {
     });
   }
 })}  
-// // Toggle favorite status
-// function toggleFavorite(coinId, coinName) {
-//   const index = favorites.findIndex((fav) => fav.id === coinId);
-//   if (index === -1) {
-//     favorites.push({ id: coinId, name: coinName });
-//   } else {
-//     favorites.splice(index, 1);
-//   }
-//   localStorage.setItem("favorites", JSON.stringify(favorites));
-//   updateFavoritesList();
-// }
-// // Update favorites UI
-// function updateFavoritesList() {
-//   favoritesList.innerHTML = "";
-//   favorites.forEach((fav) => {
-//     const listItem = document.createElement("li");
-//     listItem.textContent = fav.name;
-//     favoritesList.appendChild(listItem);
-//   }); 
-// }
-// // Update favorite button state
-// function updateFavoriteButton(button, coinId) {
-//   if (favorites.some((fav) => fav.id === coinId)) {
-//     button.style.color = "gold"; // Highlight when favorite
-//   } else {
-//     button.style.color = "gray"; // Default color
-//   }
-// }
-// // Load favorites on page load
-// updateFavoritesList();
+
 // added now 
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.querySelector(".login-form");
